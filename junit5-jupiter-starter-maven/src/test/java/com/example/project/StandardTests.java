@@ -6,19 +6,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class StandardTests {
     @BeforeAll
     static void initAll() {
-    }
-
-    @AfterAll
-    static void tearDownAll() {
     }
 
     @BeforeEach
@@ -48,5 +42,9 @@ class StandardTests {
 
     @AfterEach
     void tearDown() {
+    }
+
+    @AfterAll
+    static void tearDownAll() {
     }
 }
